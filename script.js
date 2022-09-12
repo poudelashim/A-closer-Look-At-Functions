@@ -49,3 +49,40 @@ const newPassport = function (person) {
 };
 newPassport(ashim);
 checkIn(flight, ashim);
+
+///////////////////////////////////////////////////////////////////////////////////////////////
+
+//FIRST CLASS FUNCTIONS VS HIGHER-ORDER FUNCTIONS
+
+/* FIRST CLASS FUNCTIONS
+
+JS treats functions as first class citizens
+This means functions are simply values
+Functions are just another "type" of objects
+*/
+
+//Higher Order Function
+/*
+A function that receives another function as an argument, that returns a new functions or both 
+This is only possible because of the first class functions.
+For eg:
+1. Function that receives another function.
+
+const greet = ()=> console.log('Hey Ashim');
+btnClose addEventListener('click',greet);
+
+In the above example, addEventListener is the Higher-order function and greet is call back function.
+
+2. Function that returns new function
+
+function count(){               //higher-order function
+    let counter =0;
+    return function (){         //returned function
+        counter ++;
+
+    };
+}
+
+*/
+
+// Functions accepting call back functions
